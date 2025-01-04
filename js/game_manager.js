@@ -154,11 +154,11 @@ GameManager.prototype.move = function (direction) {
 
         // Only one merger per row traversal?
         if (next && next.value === tile.value && !next.mergedFrom) {
-          // 1% chance the merge results in a 2
+          // 5% chance the merge results in a 2
           // 5% change the merge results in double what you expected
           var rand = Math.random();
           var merged_value = tile.value;
-          if (rand < 0.01) {
+          if (rand < 0.05) {
               // sorry bro, it's a 2 now
               // it'll be doubled when the new Tile is created below
               merged_value = 1;
