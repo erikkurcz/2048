@@ -1,6 +1,10 @@
 # 2048, but with 1s, 2s, and 4s
 
-A version that has an 80% chance of generating a 1, 12% chance of generating a 2, and 8% chance of generating a 4 tile.
+A version that has a:
+
+* 60% chance of generating a 1 
+* 20% chance of generating a 2
+* 20% chance of generating a 3
 
 ### Play [**at this link**](https://erikkurcz.github.io/2048)
 

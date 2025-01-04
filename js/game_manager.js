@@ -70,12 +70,12 @@ GameManager.prototype.addRandomTile = function () {
   if (this.grid.cellsAvailable()) {
     var rand = Math.random();
     var value = 1;
-    if (rand < 0.80){
+    if (rand < 0.60){
         value = 1;
-    } else if (rand < 0.92) {
+    } else if (rand < 0.80) {
         value = 2;
     } else {
-        value = 4;
+        value = 3;
     }
     var tile = new Tile(this.grid.randomAvailableCell(), value);
 
