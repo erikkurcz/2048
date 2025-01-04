@@ -3,8 +3,8 @@
 A version that has a:
 
 * 80% chance of generating a 1 
-* 19% chance of generating a 2
-* 1% chance of generating a 3, which is effectively useless and will make this a lot harder for you
+* 12% chance of generating a 2
+* 8% chance of generating 0.5
 
 ### Play [**at this link**](https://erikkurcz.github.io/2048)
 
