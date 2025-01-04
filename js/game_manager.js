@@ -162,8 +162,8 @@ GameManager.prototype.move = function (direction) {
 
         // Only one merger per row traversal?
         if (next && next.value === tile.value && !next.mergedFrom) {
-          // signed int wraparound 2048! Once you combine two 32s, you start over!
-          var merged_value = tile.value === 32 ? 1 : tile.value;
+          // 1% chance this merge results in a 2, just because
+          var merged_value = Math.random() < 0.01 ? 1 : tile.value;
           var merged = new Tile(positions.next, merged_value * 2);
           merged.mergedFrom = [tile, next];
 
