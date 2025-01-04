@@ -71,11 +71,11 @@ GameManager.prototype.addRandomTile = function () {
     var rand = Math.random();
     var value = 1;
     if (rand < 0.80){
-        value = 0.25;
-    } else if (rand < 0.95) {
-        value = 0.5;
+        value = 1;
+    } else if (rand < 0.99) {
+        value = 2;
     } else {
-        value = 0;
+        value = 16;
     }
     var tile = new Tile(this.grid.randomAvailableCell(), value);
 
@@ -162,7 +162,8 @@ GameManager.prototype.move = function (direction) {
 
         // Only one merger per row traversal?
         if (next && next.value === tile.value && !next.mergedFrom) {
-          var merged_value = tile.value === 0 ? 0.5 : tile.value;
+          // signed int wraparound 2048! Once you combine two 128s, you start over!
+          var merged_value = tile.value === 128 ? 1 : tile.value;
           var merged = new Tile(positions.next, merged_value * 2);
           merged.mergedFrom = [tile, next];
 
