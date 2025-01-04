@@ -2,9 +2,9 @@
 
 A version that has a:
 
-* 60% chance of generating a 1 
-* 20% chance of generating a 2
-* 20% chance of generating a 3
+* 80% chance of generating a 1 
+* 19% chance of generating a 2
+* 1% chance of generating a 3, which is effectively useless and will make this a lot harder for you
 
 ### Play [**at this link**](https://erikkurcz.github.io/2048)
 

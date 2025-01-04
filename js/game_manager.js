@@ -72,9 +72,10 @@ GameManager.prototype.addRandomTile = function () {
     var value = 1;
     if (rand < 0.60){
         value = 1;
-    } else if (rand < 0.80) {
+    } else if (rand < 0.99) {
         value = 2;
     } else {
+        // very unlucky, you are screwed when this shows up
         value = 3;
     }
     var tile = new Tile(this.grid.randomAvailableCell(), value);
