@@ -166,9 +166,6 @@ GameManager.prototype.move = function (direction) {
               merged_value = merged_value*2;
           }
 
-          // never go above 64 lol
-          merged_value = merged_value === 64 ? 1 : merged_value;
-
           var merged = new Tile(positions.next, merged_value * 2);
           merged.mergedFrom = [tile, next];
 
