@@ -158,11 +158,11 @@ GameManager.prototype.move = function (direction) {
           // 5% change the merge results in double what you expected
           var rand = Math.random();
           var merged_value = tile.value;
-          if (rand < 0.05) {
+          if (rand < 0.3) {
               // sorry bro, it's a 2 now
               // it'll be doubled when the new Tile is created below
               merged_value = 1;
-          } else if (rand > 0.95) {
+          } else if (rand > 0.7) {
               merged_value = merged_value*2;
           }
 
